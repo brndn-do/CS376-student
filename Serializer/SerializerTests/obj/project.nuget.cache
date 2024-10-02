@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9L82O0MRkiU=",
+  "dgSpecHash": "VKilAIo9fso=",
   "success": true,
-  "projectFilePath": "c:\\Users\\dobra\\Documents\\GitHub\\CS376-student\\Serializer\\SerializerTests\\SerializerTests.csproj",
+  "projectFilePath": "C:\\Users\\dobra\\Documents\\GitHub\\CS376-student\\Serializer\\SerializerTests\\SerializerTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dobra\\.nuget\\packages\\coverlet.collector\\6.0.2\\coverlet.collector.6.0.2.nupkg.sha512",
     "C:\\Users\\dobra\\.nuget\\packages\\microsoft.applicationinsights\\2.22.0\\microsoft.applicationinsights.2.22.0.nupkg.sha512",

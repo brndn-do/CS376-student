@@ -231,9 +231,6 @@ namespace Assets.Serialization
         /// <param name="o">Object to serialize</param>
         private void WriteComplexObject(object o)
         {
-            // NOTE:
-            // USE RECURSION SOMEHOW FOR NESTED OBJECTS
-
             // Everything inside the brackets
             Action WriteFields = () => 
             {
@@ -241,16 +238,14 @@ namespace Assets.Serialization
                 WriteField("type", o.GetType().Name, true);
                 
                 foreach (KeyValuePair<string, object> p in Utilities.SerializedFields(o))
-                {
                     WriteField(p.Key, p.Value, false);
-                }
             };
 
             // assign this object a serial number and write it
             (int id, bool isNew) = GetId(o);
-            Write(id);
-            // outer brackets
-            WriteBracketedExpression("{", WriteFields,"}");
+            Write("#" + id);
+            if (isNew)
+                WriteBracketedExpression("{", WriteFields,"}");
         }
     }
 }
