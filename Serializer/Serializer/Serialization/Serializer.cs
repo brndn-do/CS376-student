@@ -231,6 +231,9 @@ namespace Assets.Serialization
         /// <param name="o">Object to serialize</param>
         private void WriteComplexObject(object o)
         {
+            // NOTE:
+            // USE RECURSION SOMEHOW FOR NESTED OBJECTS
+
             // Everything inside the brackets
             Action WriteFields = () => 
             {
